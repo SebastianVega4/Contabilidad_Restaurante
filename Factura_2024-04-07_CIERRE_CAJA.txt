@@ -1,0 +1,11 @@
+-----------------------------------------------
+             Administrator
+    su facura su caja a cerrado 
+ 
+Caja inicial: 281.750
+Ventas 06:     80.000
+Ventas 07:    737.500
+
+TOTAL:        1.099.250
+
+ 

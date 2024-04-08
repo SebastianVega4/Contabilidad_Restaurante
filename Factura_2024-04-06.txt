@@ -1,0 +1,19 @@
+-----------------------------------------------
+             Administrator
+    su facura se ha generado con exito 
+ - _________________________________ - 
+    Producto:  Trucha mandarina
+    Cantidad: 1
+    Precio:  35000.0
+ - _________________________________ - 
+    Producto:  Trucha al ajillo
+    Cantidad: 1
+    Precio:  35000.0
+ - _________________________________ - 
+    Producto:  Jugos naturales
+    Cantidad: 2
+    Precio:  5000.0
+ _______________________________         Total:  $80000.0
+
+TOTAL:80.000
+ 

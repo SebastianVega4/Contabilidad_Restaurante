@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Conta_Alcala_txt:jar">
+    <output-path>$PROJECT_DIR$/</output-path>
+    <root id="archive" name="Conta_Alcala_txt.jar">
+      <element id="module-output" name="Conta_Alcala_txt" />
+    </root>
+  </artifact>
+</component>
