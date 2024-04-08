@@ -3,6 +3,7 @@ package Interface;
 import logic.LogicAlcala;
 import model.Product;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
@@ -12,13 +13,18 @@ public class GUIComanPanel {
     private final JPanel panel;
     private final LogicAlcala logicAlcala;
 
-    public GUIComanPanel(GUIstore guiStore) {
+    public GUIComanPanel(GUIstore guiStore) throws IOException {
         this.logicAlcala = guiStore.getLogicAlcala();
         panel = new JPanel(new BorderLayout()) {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon backgroundImage = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons\\coman.png")));
+                ImageIcon backgroundImage = null;
+                try {
+                    backgroundImage = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\coman.png")));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 g.drawImage(backgroundImage.getImage(), 0, 0, panel.getWidth(), panel.getHeight(), this);
             }
         };
@@ -26,7 +32,7 @@ public class GUIComanPanel {
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setOpaque(false);
 
-        ImageIcon imageLogo = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons\\Logo.png")));
+        ImageIcon imageLogo = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\Logo.png")));
         Image imageLog = imageLogo.getImage().getScaledInstance(70, 70, Image.SCALE_SMOOTH);
         ImageIcon scaledImageLogo = new ImageIcon(imageLog);
         JLabel imgLog = new JLabel(scaledImageLogo);
@@ -57,17 +63,17 @@ public class GUIComanPanel {
         centerPanel.add(numberLabel, gbcCart);
         gbcCart.gridx++;
 
-        ImageIcon eraseIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons\\eraseCar.png")));
+        ImageIcon eraseIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\eraseCar.png")));
         Image eraseImage = eraseIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
         ImageIcon scaledEraseIcon = new ImageIcon(eraseImage);
 
         for (Product product : logicAlcala.getCart().getProducts()) {
             ImageIcon imageProduct;
             try {
-                imageProduct = new ImageIcon(getClass().getResource("/Icons/" + product.getId() + ".png"));
+                imageProduct = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/" + product.getId() + ".png")));
             } catch (NullPointerException e) {
                 // Si no se encuentra la imagen, usa una imagen predeterminada
-                imageProduct = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/default.png")));
+                imageProduct = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/default.png")));
             }
             Image image = imageProduct.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
             ImageIcon scaledImageProduct = new ImageIcon(image);
@@ -98,7 +104,11 @@ public class GUIComanPanel {
             removeButton.addActionListener(e -> {
                 logicAlcala.eraseProductCart(product);
                 JOptionPane.showMessageDialog(guiStore.getFrame(), "Producto eliminado de la Comanda.");
-                guiStore.showCartPanel();
+                try {
+                    guiStore.showCartPanel();
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
             });
         }
         JLabel totalLabel = new JLabel("Total: $" + logicAlcala.getCart().calcTotal());
@@ -107,7 +117,7 @@ public class GUIComanPanel {
         gbcCart.gridx = 3;
         centerPanel.add(totalLabel, gbcCart);
 
-        ImageIcon clearIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons\\vaciarCar1.png")));
+        ImageIcon clearIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\vaciarCar1.png")));
         Image clearImage = clearIcon.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
         ImageIcon scaledClaerIcon = new ImageIcon(clearImage);
         JButton clearButton = new JButton(" Vaciar  Comanda \n  ", scaledClaerIcon);
@@ -119,7 +129,7 @@ public class GUIComanPanel {
         gbcCart.gridx = -1;
         centerPanel.add(clearButton, gbcCart);
 
-        ImageIcon checkoutIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons\\checkout.png")));
+        ImageIcon checkoutIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\checkout.png")));
         Image checkoutImage = checkoutIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
         ImageIcon scaledCheckoutIcon = new ImageIcon(checkoutImage);
         JButton transfButton = new JButton("Transferencia", scaledCheckoutIcon);
@@ -149,7 +159,7 @@ public class GUIComanPanel {
         JPanel buttomPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         buttomPanel.setOpaque(false);
 
-        ImageIcon backIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons\\back.png")));
+        ImageIcon backIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\back.png")));
         Image backImage = backIcon.getImage().getScaledInstance(15, 15, Image.SCALE_SMOOTH);
         ImageIcon scaledBackIcon = new ImageIcon(backImage);
         JButton backButton = new JButton("Atrás", scaledBackIcon);
@@ -163,7 +173,12 @@ public class GUIComanPanel {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon backgroundImage = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/comand.png")));
+                ImageIcon backgroundImage = null;
+                try {
+                    backgroundImage = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/comand.png")));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 g.drawImage(backgroundImage.getImage(), 0, 0, backgroundImage.getIconWidth() + 500, backgroundImage.getIconHeight(), this);
             }
         };
@@ -179,7 +194,11 @@ public class GUIComanPanel {
 
         clearButton.addActionListener(e -> {
             logicAlcala.clearCart();
-            guiStore.showCustomerMenuPanel();
+            try {
+                guiStore.showCustomerMenuPanel();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
         });
 
         transfButton.addActionListener(e -> {
@@ -193,7 +212,11 @@ public class GUIComanPanel {
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-            guiStore.showCustomerMenuPanel();
+            try {
+                guiStore.showCustomerMenuPanel();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
         });
 
         datafButton.addActionListener(e -> {
@@ -210,7 +233,11 @@ public class GUIComanPanel {
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-            guiStore.showCustomerMenuPanel();
+            try {
+                guiStore.showCustomerMenuPanel();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
         });
 
         normalyButton.addActionListener(e -> {
@@ -221,10 +248,20 @@ public class GUIComanPanel {
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-            guiStore.showCustomerMenuPanel();
+            try {
+                guiStore.showCustomerMenuPanel();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
         });
 
-        backButton.addActionListener(e -> guiStore.showCustomerMenuPanel());
+        backButton.addActionListener(e -> {
+            try {
+                guiStore.showCustomerMenuPanel();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
     }
 
     public JPanel getPanel() {

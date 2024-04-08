@@ -4,26 +4,30 @@ import logic.LogicAlcala;
 import model.Product;
 import persistence.Inventory;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.io.IOException;
-import java.util.Objects;
 
 public class GUIEditProduct {
 
     private final JPanel panel;
-    private final LogicAlcala logicAlcala;
     private final Inventory inventory;
 
-    public GUIEditProduct(GUIstore guiStore, Product product, int index) {
-        this.logicAlcala = guiStore.getLogicAlcala();
+    public GUIEditProduct(GUIstore guiStore, Product product, int index) throws IOException {
+        LogicAlcala logicAlcala = guiStore.getLogicAlcala();
         this.inventory = GUIstore.getInventory();
         panel = new JPanel(new BorderLayout()) {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon backgroundImage = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/Menu.png")));
+                ImageIcon backgroundImage = null;
+                try {
+                    backgroundImage = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/Menu.png")));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 g.drawImage(backgroundImage.getImage(), 0, 0, panel.getWidth(), panel.getHeight(), this);
             }
         };
@@ -31,7 +35,7 @@ public class GUIEditProduct {
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setOpaque(false);
 
-        ImageIcon imageLogo = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/Logo.png")));
+        ImageIcon imageLogo = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/Logo.png")));
         Image image = imageLogo.getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
         ImageIcon scaledImageLogo = new ImageIcon(image);
         JLabel imgLogo = new JLabel(scaledImageLogo);
@@ -145,7 +149,13 @@ public class GUIEditProduct {
             }
         });
 
-        btnCancel.addActionListener(e -> guiStore.showCatalogPanel());
+        btnCancel.addActionListener(e -> {
+            try {
+                guiStore.showCatalogPanel();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
     }
 
     public JPanel getPanel() {

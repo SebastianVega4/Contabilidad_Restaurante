@@ -5,7 +5,6 @@ import model.Administrator;
 import model.Order;
 import model.Product;
 import model.ShoppingComan;
-import persistence.ImageProducts;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -20,7 +19,6 @@ import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 public class LogicAlcala {
-    private final ImageProducts ip;
     private final ShoppingComan shoppingComan = new ShoppingComan();
     private Order order;
     private String facture = "";
@@ -28,7 +26,6 @@ public class LogicAlcala {
     private int propina;
 
     public LogicAlcala() {
-        ip = new ImageProducts();
         propina = 0;
     }
 

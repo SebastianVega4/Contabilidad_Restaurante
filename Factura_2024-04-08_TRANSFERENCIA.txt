@@ -1,0 +1,27 @@
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Papitas chorreadas
+   Cantidad:  1
+   Precio:    12000.0
+-- _________________________________ --
+   Producto:  Picada mediana (4 personas)
+   Cantidad:  1
+   Precio:    120000.0
+-- _________________________________ --
+   Producto:  Picada Alcalá (6 personas)
+   Cantidad:  1
+   Precio:    170000.0
+-- _________________________________ --
+   Producto:  Cazuela de mariscos
+   Cantidad:  1
+   Precio:    46000.0
+:_______________________________:            Total:  $348000.0
+                                           nequi
+ 
+
+ 
+
+Total de todas las facturas: $348000.0
+Total de todas las facturas: $348000.0

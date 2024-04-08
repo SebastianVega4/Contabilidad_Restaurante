@@ -1,0 +1,12 @@
+-----------------------------------------
+Caja Inicial: 5000
+Pago: 235525, gsdbxf
+Pago: 100000, cocass
+Ventas: 925500.0
+-----------------------------------------
+TOTAL Caja: 594975
+
+TOTAL Datafono: 195500.0
+TOTAL Transferencias: 348000.0
+
+TOTAL ventas : 1138475.0

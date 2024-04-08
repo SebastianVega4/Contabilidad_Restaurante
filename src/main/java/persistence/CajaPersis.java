@@ -89,5 +89,4 @@ public class CajaPersis {
     public Box getBox() {
         return box;
     }
-
 }

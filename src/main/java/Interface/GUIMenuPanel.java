@@ -1,18 +1,24 @@
 package Interface;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.util.Objects;
+import java.io.IOException;
 
 public class GUIMenuPanel {
     private final JPanel panel;
 
-    public GUIMenuPanel(GUIstore guiStore) {
+    public GUIMenuPanel(GUIstore guiStore) throws IOException {
         panel = new JPanel(new BorderLayout()) {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon backgroundImage = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/menu.png")));
+                ImageIcon backgroundImage = null;
+                try {
+                    backgroundImage = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/menu.png")));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 g.drawImage(backgroundImage.getImage(), 0, 0, panel.getWidth(), panel.getHeight(), this);
             }
         };
@@ -20,7 +26,7 @@ public class GUIMenuPanel {
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setOpaque(false);
 
-        ImageIcon imageLogo = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/Logo.png")));
+        ImageIcon imageLogo = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/Logo.png")));
         Image image = imageLogo.getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
         ImageIcon scaledImageLogo = new ImageIcon(image);
         JLabel imgLogo = new JLabel(scaledImageLogo);
@@ -29,7 +35,7 @@ public class GUIMenuPanel {
         JPanel centerPanel = new JPanel(new GridBagLayout());
         centerPanel.setOpaque(false);
 
-        ImageIcon catalogIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/catalogo.png")));
+        ImageIcon catalogIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/catalogo.png")));
         Image catalogImage = catalogIcon.getImage().getScaledInstance(80, 80, Image.SCALE_SMOOTH);
         ImageIcon scaledCatalogIcon = new ImageIcon(catalogImage);
         JButton catalogButton = new JButton("Catálogo", scaledCatalogIcon);
@@ -42,7 +48,7 @@ public class GUIMenuPanel {
         catalogButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         centerPanel.add(catalogButton);
 
-        ImageIcon cartIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/carrito.png")));
+        ImageIcon cartIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/carrito.png")));
         Image cartImage = cartIcon.getImage().getScaledInstance(80, 80, Image.SCALE_SMOOTH);
         ImageIcon scaledCartIcon = new ImageIcon(cartImage);
         JButton cartButton = new JButton("Comanda", scaledCartIcon);
@@ -54,7 +60,7 @@ public class GUIMenuPanel {
         cartButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         centerPanel.add(cartButton);
 
-        ImageIcon boxIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/box.png")));
+        ImageIcon boxIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/box.png")));
         Image boxImage = boxIcon.getImage().getScaledInstance(80, 80, Image.SCALE_SMOOTH);
         ImageIcon scaledboxIcon = new ImageIcon(boxImage);
         JButton boxBotton = new JButton("CAJA", scaledboxIcon);
@@ -66,7 +72,7 @@ public class GUIMenuPanel {
         boxBotton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         centerPanel.add(boxBotton);
 
-        ImageIcon calIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/calcula.png")));
+        ImageIcon calIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/calcula.png")));
         Image calImage = calIcon.getImage().getScaledInstance(80, 80, Image.SCALE_SMOOTH);
         ImageIcon scaledcalIcon = new ImageIcon(calImage);
         JButton calculatorBotton = new JButton("CALCULADORA", scaledcalIcon);
@@ -81,7 +87,7 @@ public class GUIMenuPanel {
         JPanel buttomPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         buttomPanel.setOpaque(false);
 
-        ImageIcon signoutIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/signout11.png")));
+        ImageIcon signoutIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/signout11.png")));
         Image signoutImage = signoutIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
         ImageIcon scaledSignoutIcon = new ImageIcon(signoutImage);
         JButton signOffButton = new JButton("Cerrar Sesión", scaledSignoutIcon);
@@ -97,11 +103,41 @@ public class GUIMenuPanel {
         panel.add(centerPanel, BorderLayout.CENTER);
         panel.add(buttomPanel, BorderLayout.PAGE_END);
 
-        catalogButton.addActionListener(e -> guiStore.showCatalogPanel());
-        cartButton.addActionListener(e -> guiStore.showCartPanel());
-        boxBotton.addActionListener(e -> guiStore.showBoxPanel());
-        calculatorBotton.addActionListener(e -> guiStore.showCalculatorPanel());
-        signOffButton.addActionListener(e -> guiStore.showLoginPanel());
+        catalogButton.addActionListener(e -> {
+            try {
+                guiStore.showCatalogPanel();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        cartButton.addActionListener(e -> {
+            try {
+                guiStore.showCartPanel();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        boxBotton.addActionListener(e -> {
+            try {
+                guiStore.showBoxPanel();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        calculatorBotton.addActionListener(e -> {
+            try {
+                guiStore.showCalculatorPanel();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        signOffButton.addActionListener(e -> {
+            try {
+                guiStore.showLoginPanel();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
     }
 
     public JPanel getPanel() {

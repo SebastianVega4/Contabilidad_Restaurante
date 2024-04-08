@@ -8,11 +8,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Box {
-    private int boxinitial;
     private final ArrayList<Integer> pagos;
     private final ArrayList<String> referPagos;
     private final ArrayList<Integer> adiciones;
     private final ArrayList<String> referadiciones;
+    private int boxinitial;
 
     public Box() {
         boxinitial = 0;

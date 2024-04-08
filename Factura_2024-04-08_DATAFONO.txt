@@ -1,0 +1,46 @@
+-----------------------------------------------
+             Administrator
+    su facura se ha generado con exito 
+ - _________________________________ - 
+    Producto:  Media Sopa
+    Cantidad: 2
+    Precio:  5500.0
+ - _________________________________ - 
+    Producto:  Picada pequeña
+    Cantidad: 1
+    Precio:  68000.0
+ - _________________________________ - 
+    Producto:  Cazuela de mariscos
+    Cantidad: 1
+    Precio:  46000.0
+ - _________________________________ - 
+    Producto:  Jugos naturales
+    Cantidad: 3
+    Precio:  5000.0
+ - _________________________________ - 
+    Producto:  desechable
+    Cantidad: 1
+    Precio:  1500.0
+ _______________________________         Total:  $141500.0
+ 
+
+ 
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Papitas chorreadas
+   Cantidad:  3
+   Precio:    12000.0
+-- _________________________________ --
+   Producto:  Sopa tipica
+   Cantidad:  2
+   Precio:    9000.0
+:_______________________________:            Total:  $54000.0
+                                         Propina en ese valor de:0
+ 
+
+ 
+
+Total de todas las facturas: $195500.0
+Total de todas las facturas: $195500.0

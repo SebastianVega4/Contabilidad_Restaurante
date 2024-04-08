@@ -3,26 +3,33 @@ package Interface;
 import logic.LogicAlcala;
 import model.Product;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class GUICartaPanel {
     private final JPanel panel;
     private final LogicAlcala logicAlcala;
     private final List<Product> filteredProducts;
 
-    public GUICartaPanel(GUIstore guiStore) {
+    public GUICartaPanel(GUIstore guiStore) throws IOException {
         this.logicAlcala = guiStore.getLogicAlcala();
         panel = new JPanel(new BorderLayout()) {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon backgroundImage = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons\\carta.png")));
+                ImageIcon backgroundImage = null;
+                try {
+                    backgroundImage = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\carta.png")));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 g.drawImage(backgroundImage.getImage(), 0, 0, panel.getWidth(), panel.getHeight(), this);
             }
         };
@@ -31,7 +38,7 @@ public class GUICartaPanel {
         GridBagConstraints gbc = new GridBagConstraints();
         topPanel.setOpaque(false);
 
-        ImageIcon imageLogo = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons\\Logo.png")));
+        ImageIcon imageLogo = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\Logo.png")));
         Image imageL = imageLogo.getImage().getScaledInstance(70, 70, Image.SCALE_SMOOTH);
         ImageIcon scaledImageLogo = new ImageIcon(imageL);
         JLabel imgLogo = new JLabel(scaledImageLogo);
@@ -78,23 +85,29 @@ public class GUICartaPanel {
         gbcProduct.gridx++;
         centerPanel.add(numberLabelTitle, gbcProduct);
 
-        ImageIcon addIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons\\add.png")));
+        ImageIcon addIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\add.png")));
         Image addImage = addIcon.getImage().getScaledInstance(15, 15, Image.SCALE_SMOOTH);
         ImageIcon scaledAddIcon = new ImageIcon(addImage);
 
-        ImageIcon editIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/edit.png")));
+        ImageIcon editIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/edit.png")));
         Image editImage = editIcon.getImage().getScaledInstance(15, 15, Image.SCALE_SMOOTH);
         ImageIcon scalededitIcon = new ImageIcon(editImage);
 
         filteredProducts = new ArrayList<>(GUIstore.getInventory().getProducts());
 
         for (Product product : filteredProducts) {
-            ImageIcon imageProduct;
+            ImageIcon imageProduct = null;
             try {
-                imageProduct = new ImageIcon(getClass().getResource("/Icons/" + product.getId() + ".png"));
-            } catch (NullPointerException e) {
-                imageProduct = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/default.png")));
+                InputStream inputStream = getClass().getResourceAsStream("/Icons/" + product.getId() + ".png");
+                if (inputStream == null) {
+                    inputStream = getClass().getResourceAsStream("/Icons/default.png");
+                }
+                imageProduct = new ImageIcon(ImageIO.read(inputStream));
+            } catch (IOException e) {
+                // Manejar la excepción adecuadamente, por ejemplo, mostrando un mensaje de error
+                e.printStackTrace();
             }
+
             Image image = imageProduct.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
             ImageIcon scaledImageProduct = new ImageIcon(image);
             JLabel imgProduct = new JLabel(scaledImageProduct);
@@ -138,7 +151,13 @@ public class GUICartaPanel {
 
             buys.addChangeListener(e -> logicAlcala.addNumberPurchesed(product, (Integer) buys.getValue()));
 
-            addButtonModi.addActionListener(e -> guiStore.showEditProdut(product, product.getId()));
+            addButtonModi.addActionListener(e -> {
+                try {
+                    guiStore.showEditProdut(product, product.getId());
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+            });
 
             addButton.addActionListener(e -> {
                 if ((Integer) buys.getValue() == 0)
@@ -172,7 +191,7 @@ public class GUICartaPanel {
         JPanel buttomPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         buttomPanel.setOpaque(false);
 
-        ImageIcon carIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons\\carrito.png")));
+        ImageIcon carIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\carrito.png")));
         Image carImage = carIcon.getImage().getScaledInstance(15, 15, Image.SCALE_SMOOTH);
         ImageIcon scaledcarIcon = new ImageIcon(carImage);
         JButton carButton = new JButton("Comanda", scaledcarIcon);
@@ -182,7 +201,7 @@ public class GUICartaPanel {
         carButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         buttomPanel.add(carButton);
 
-        ImageIcon backIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons\\back.png")));
+        ImageIcon backIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\back.png")));
         Image backImage = backIcon.getImage().getScaledInstance(15, 15, Image.SCALE_SMOOTH);
         ImageIcon scaledBackIcon = new ImageIcon(backImage);
         JButton backButton = new JButton("Atrás", scaledBackIcon);
@@ -196,7 +215,12 @@ public class GUICartaPanel {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon backgroundImage = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons\\caja.png")));
+                ImageIcon backgroundImage = null;
+                try {
+                    backgroundImage = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\caja.png")));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 g.drawImage(backgroundImage.getImage(), 0, 0, 10000, 10000, this);
             }
         };
@@ -236,12 +260,18 @@ public class GUICartaPanel {
             centerPanel.add(numberLabelTitle, gbcProduct);
 
             for (Product product : filteredProducts) {
-                ImageIcon imageProduct;
+                ImageIcon imageProduct = null;
                 try {
-                    imageProduct = new ImageIcon(getClass().getResource("/Icons/" + product.getId() + ".png"));
-                } catch (NullPointerException r) {
-                    imageProduct = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/default.png")));
+                    InputStream inputStream = getClass().getResourceAsStream("/Icons/" + product.getId() + ".png");
+                    if (inputStream == null) {
+                        inputStream = getClass().getResourceAsStream("/Icons/default.png");
+                    }
+                    imageProduct = new ImageIcon(ImageIO.read(inputStream));
+                } catch (IOException r) {
+                    // Manejar la excepción adecuadamente, por ejemplo, mostrando un mensaje de error
+                    r.printStackTrace();
                 }
+
                 Image image = imageProduct.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
                 ImageIcon scaledImageProduct = new ImageIcon(image);
                 JLabel imgProduct = new JLabel(scaledImageProduct);
@@ -285,7 +315,13 @@ public class GUICartaPanel {
 
                 buys.addChangeListener(r -> logicAlcala.addNumberPurchesed(product, (Integer) buys.getValue()));
 
-                addButtonModi.addActionListener(r -> guiStore.showEditProdut(product, product.getId()));
+                addButtonModi.addActionListener(r -> {
+                    try {
+                        guiStore.showEditProdut(product, product.getId());
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                });
 
                 addButton.addActionListener(r -> {
                     if ((Integer) buys.getValue() == 0)
@@ -321,8 +357,20 @@ public class GUICartaPanel {
         });
 
         searchField.addActionListener(r -> searchButton.doClick());
-        backButton.addActionListener(e -> guiStore.showCustomerMenuPanel());
-        carButton.addActionListener(e -> guiStore.showCartPanel());
+        backButton.addActionListener(e -> {
+            try {
+                guiStore.showCustomerMenuPanel();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        carButton.addActionListener(e -> {
+            try {
+                guiStore.showCartPanel();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
     }
 
     public JPanel getPanel() {

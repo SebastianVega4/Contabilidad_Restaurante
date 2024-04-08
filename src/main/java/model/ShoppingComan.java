@@ -22,10 +22,6 @@ public class ShoppingComan {
         this.products.remove(product);
     }
 
-    public double calcTotalForProduct(Product product) {
-        return product.getPrice() * purchased.get(product);
-    }
-
     public double calcTotal() {
         double total = 0;
         for (Product product : products) {
@@ -45,10 +41,6 @@ public class ShoppingComan {
 
     public List<Product> getProducts() {
         return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
     }
 
 }

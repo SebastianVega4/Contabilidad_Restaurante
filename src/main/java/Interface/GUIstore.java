@@ -40,7 +40,7 @@ public class GUIstore {
         return logicAlcala;
     }
 
-    public void showLoginPanel() {
+    public void showLoginPanel() throws IOException {
         GUILoginPanel gUILoginPanel = new GUILoginPanel(this);
         frame.getContentPane().removeAll();
         frame.getContentPane().add(gUILoginPanel.getPanel(), BorderLayout.CENTER);
@@ -48,7 +48,7 @@ public class GUIstore {
         frame.repaint();
     }
 
-    public void showCustomerMenuPanel() {
+    public void showCustomerMenuPanel()throws IOException {
         GUIMenuPanel gUIMenuPanel = new GUIMenuPanel(this);
         frame.getContentPane().removeAll();
         frame.getContentPane().add(gUIMenuPanel.getPanel(), BorderLayout.CENTER);
@@ -56,15 +56,15 @@ public class GUIstore {
         frame.repaint();
     }
 
-    public void showCatalogPanel() {
-        GUICartaPanel gUICartaPanel = new GUICartaPanel(this);
+    public void showCatalogPanel()throws IOException {
+        GUICartaPanel gUICartaPanel = new GUICartaPanel (this);
         frame.getContentPane().removeAll();
         frame.getContentPane().add(gUICartaPanel.getPanel(), BorderLayout.CENTER);
         frame.revalidate();
         frame.repaint();
     }
 
-    public void showCartPanel() {
+    public void showCartPanel() throws IOException{
         GUIComanPanel gUIComanPanel = new GUIComanPanel(this);
         frame.getContentPane().removeAll();
         frame.getContentPane().add(gUIComanPanel.getPanel(), BorderLayout.CENTER);
@@ -72,7 +72,7 @@ public class GUIstore {
         frame.repaint();
     }
 
-    public void showEditProdut(Product product, int index) {
+    public void showEditProdut(Product product, int index) throws IOException{
         GUIEditProduct gUIEditPanel = new GUIEditProduct(this, product, index);
         frame.getContentPane().removeAll();
         frame.getContentPane().add(gUIEditPanel.getPanel(), BorderLayout.CENTER);
@@ -80,7 +80,7 @@ public class GUIstore {
         frame.repaint();
     }
 
-    public void showBoxPanel() {
+    public void showBoxPanel() throws IOException {
         GUIboxPanel guIboxPanel = new GUIboxPanel(this);
         frame.getContentPane().removeAll();
         frame.getContentPane().add(guIboxPanel.getPanel(), BorderLayout.CENTER);
@@ -88,7 +88,7 @@ public class GUIstore {
         frame.repaint();
     }
 
-    public void showCalculatorPanel() {
+    public void showCalculatorPanel() throws IOException{
         GUIcalculatorPanel guIcalculatorPanel = new GUIcalculatorPanel(this);
         frame.getContentPane().removeAll();
         frame.getContentPane().add(guIcalculatorPanel.getPanel(), BorderLayout.CENTER);

@@ -2,22 +2,28 @@ package Interface;
 
 import logic.LogicAlcala;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.util.Objects;
+import java.io.IOException;
 
 public class GUILoginPanel {
     private final JPanel panel;
     private final LogicAlcala logicAlcala;
 
-    public GUILoginPanel(GUIstore guiStore) {
+    public GUILoginPanel(GUIstore guiStore) throws IOException {
         this.logicAlcala = guiStore.getLogicAlcala();
         //Fondo
         panel = new JPanel(new BorderLayout()) {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon backgroundImage = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/login.png")));
+                ImageIcon backgroundImage = null;
+                try {
+                    backgroundImage = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/login.png")));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 g.drawImage(backgroundImage.getImage(), 0, 0, getWidth(), getHeight(), this);
             }
         };
@@ -27,7 +33,7 @@ public class GUILoginPanel {
         topPanel.setOpaque(false);
 
         //logo empresa arriba a la izquierda
-        ImageIcon imageLogo = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Icons/Logo.png")));
+        ImageIcon imageLogo = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/logo.png")));
         Image imageLog = imageLogo.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
         ImageIcon scaledImageLogo = new ImageIcon(imageLog);
         JLabel imgLog = new JLabel(scaledImageLogo);
@@ -99,7 +105,11 @@ public class GUILoginPanel {
         //capturar evento del boton login
         loginButton.addActionListener(e -> {
             if (logicAlcala.login(userField.getText(), new String(passwordField.getPassword()))) {
-                guiStore.showCustomerMenuPanel();
+                try {
+                    guiStore.showCustomerMenuPanel();
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
             } else {
                 JOptionPane.showMessageDialog(guiStore.getFrame(), "Credenciales inválidas. Inténtalo de nuevo.");
             }
