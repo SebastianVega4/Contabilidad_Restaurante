@@ -15,7 +15,7 @@ public class CajaPersis {
         LocalDate currentDate = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedDate = currentDate.format(formatter);
-        File file = new File(currentDir, "Factura_" + formattedDate + "_CIERRE_CAJA.txt");
+        File file = new File(currentDir, "/Facturas/Factura_" + formattedDate + "_CIERRE_CAJA.txt");
 
         if (!file.exists()) {
             file.createNewFile();
@@ -61,7 +61,7 @@ public class CajaPersis {
         LocalDate currentDate = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedDate = currentDate.format(formatter);
-        File file = new File(currentDir, "Factura_" + formattedDate + "_CIERRE_CAJA.txt");
+        File file = new File(currentDir, "/Facturas/Factura_" + formattedDate + "_CIERRE_CAJA.txt");
 
         try (FileWriter writer = new FileWriter(file)) {
             writer.write("-----------------------------------------\n");

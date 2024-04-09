@@ -19,7 +19,7 @@ public class Inventory {
         String currentDir = System.getProperty("user.dir");
         System.out.println(currentDir);
         // Crea un archivo en el directorio actual
-        File file = new File(currentDir, "ProductsAlcala.txt");
+        File file = new File(currentDir, "/Facturas/Base de Datos/ProductsAlcala.txt");
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
@@ -44,7 +44,7 @@ public class Inventory {
         String currentDir = System.getProperty("user.dir");
 
         // Crea un archivo en el directorio actual
-        File file = new File(currentDir, "ProductsAlcala.txt");
+        File file = new File(currentDir, "/Facturas/Base de Datos/ProductsAlcala.txt");
 
         try (FileWriter writer = new FileWriter(file)) {
             for (Product product : products) {

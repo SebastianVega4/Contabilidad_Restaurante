@@ -5,7 +5,10 @@ import model.Product;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
@@ -48,11 +51,34 @@ public class GUICartaPanel {
 
         JTextField searchField = new JTextField();
         searchField.setColumns(35);
-        gbc.gridx++;
-        topPanel.add(searchField, gbc);
-
         JButton searchButton = new JButton("Buscar");
         searchButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        searchField.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                newTimer();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                newTimer();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                newTimer();
+            }
+
+            private void newTimer() {
+                Timer timer = new Timer(1000, (ActionEvent e) -> {
+                    searchButton.doClick();
+                });
+                timer.setRepeats(false);
+                timer.start();
+            }
+        });
+        gbc.gridx++;
+        topPanel.add(searchField, gbc);
         gbc.gridx++;
         topPanel.add(searchButton, gbc);
 
@@ -170,6 +196,8 @@ public class GUICartaPanel {
                 else if ((Integer) buys.getValue() > 0) {
                     logicAlcala.addNumberPurchesed(product, (Integer) buys.getValue());
                     JOptionPane.showMessageDialog(guiStore.getFrame(), (logicAlcala.addPurchased(product)));
+                    searchField.setText("");
+                    searchField.requestFocusInWindow();
                 }
             });
 
@@ -334,6 +362,8 @@ public class GUICartaPanel {
                     else if ((Integer) buys.getValue() > 0) {
                         logicAlcala.addNumberPurchesed(product, (Integer) buys.getValue());
                         JOptionPane.showMessageDialog(guiStore.getFrame(), (logicAlcala.addPurchased(product)));
+                        searchField.setText("");
+                        searchField.requestFocusInWindow();
                     }
                 });
 

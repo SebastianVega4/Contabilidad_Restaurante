@@ -5,7 +5,17 @@ import java.io.*;
 public class CartaPersist {
     public void writeToFile() throws IOException {
         String currentDir = System.getProperty("user.dir");
-        File file = new File(currentDir, "ProductsAlcala.txt");
+        File directory = new File(currentDir, "Facturas/Base de Datos");
+        if (!directory.exists()) {
+            boolean success = directory.mkdirs();
+            System.out.println("Directorio 'Facturas' creado");
+            if (!success) {
+                System.err.println("No se pudo crear el directorio 'Facturas'");
+                return;
+            }
+        }
+
+        File file = new File(directory, "ProductsAlcala.txt");
 
         if (!file.exists()) {
             try (FileWriter writer = new FileWriter(file)) {
@@ -61,7 +71,7 @@ public class CartaPersist {
             }
             System.out.println("Bases de datos creada");
         }else {
-            System.out.println("Bases de datos ya existente");
+            System.err.println("Bases de datos ya existente");
         }
     }
 }

@@ -34,7 +34,7 @@ public class LogicAlcala {
         Pattern pattern = Pattern.compile("Total:\\s*\\$(\\d+(\\.\\d+)?)");
 
         // Obtén el directorio actual
-        String currentDir = System.getProperty("user.dir");
+        String currentDir = System.getProperty("user.dir")+"/Facturas/";
 
         try (Stream<Path> paths = Files.list(Paths.get(currentDir))) {
             paths.filter(p -> p.getFileName().toString().startsWith(nameArchi))
@@ -58,7 +58,7 @@ public class LogicAlcala {
     public static void addTotalSumToFile(String nameArchivo) throws IOException {
 
         // Obtén el directorio actual
-        String currentDir = System.getProperty("user.dir");
+        String currentDir = System.getProperty("user.dir")+"/Facturas/";
 
         double totalSum = sumTotalFromFiles(nameArchivo);
 
@@ -153,7 +153,7 @@ public class LogicAlcala {
 
         }
         facture += String.format("""
-                :_______________________________:            Total:  $%s
+                :_________________________________________:            Total:  $%s
                 """, shoppingComan.calcTotal());
         if (tipeFacture.equals("transferencia")) {
             facture += "                                           " + tipeTransf + "\n \n";
@@ -167,7 +167,7 @@ public class LogicAlcala {
     //crear archivo por cada factura diaria
     public void createFileFacture(String tipeFacture) throws IOException {
         // Obtén el directorio actual
-        String currentDir = System.getProperty("user.dir");
+        String currentDir = System.getProperty("user.dir")+"/Facturas/";
 
         // Obtén la fecha actual y formateala en el formato deseado
         LocalDate currentDate = LocalDate.now();
