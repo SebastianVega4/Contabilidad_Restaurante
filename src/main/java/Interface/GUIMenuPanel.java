@@ -27,8 +27,7 @@ public class GUIMenuPanel {
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setOpaque(false);
 
-        ImageIcon imageLogo = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/l" +
-                "ogo.png"))));
+        ImageIcon imageLogo = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/logo.png"))));
         Image image = imageLogo.getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
         ImageIcon scaledImageLogo = new ImageIcon(image);
         JLabel imgLogo = new JLabel(scaledImageLogo);

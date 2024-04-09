@@ -118,15 +118,18 @@ public class GUIcalculatorPanel {
         gbc.gridx = 1;
         centerPanel.add(num100, gbc);
 
-        JPanel buttonPanel = new JPanel();
-        buttonPanel.setBackground(Color.black);
-        buttonPanel.setOpaque(false);
-
-        JButton calculateButton = new JButton("Calculadora Caja");
+        JButton calculateButton = new JButton("Calcular Total");
         calculateButton.setForeground(Color.WHITE);
         calculateButton.setBackground(Color.black);
         calculateButton.setFont(new Font("Serif", Font.ITALIC, 14));
         calculateButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        gbc.gridx = 0;
+        gbc.gridy = 6;
+        centerPanel.add(calculateButton, gbc);
+
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setBackground(Color.black);
+        buttonPanel.setOpaque(false);
 
         ImageIcon backIcon = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/back.png"))));
         Image backImage = backIcon.getImage().getScaledInstance(15, 15, Image.SCALE_SMOOTH);
@@ -143,24 +146,50 @@ public class GUIcalculatorPanel {
         panel.add(buttonPanel, BorderLayout.PAGE_END);
 
         calculateButton.addActionListener(e -> {
+            int num2Value;
             try {
-                int num2Value = Integer.parseInt(num2.getText());
-                int num5Value = Integer.parseInt(num5.getText());
-                int num10Value = Integer.parseInt(num10.getText());
-                int num20Value = Integer.parseInt(num20.getText());
-                int num50Value = Integer.parseInt(num50.getText());
-                int num100Value = Integer.parseInt(num100.getText());
-
-                int billetes = (2_000 * num2Value) +
-                               (5_000 * num5Value) +
-                               (10_000 * num10Value) +
-                               (20_000 * num20Value) +
-                               (50_000 * num50Value) +
-                               (100_000 * num100Value);
-                JOptionPane.showMessageDialog(null, "Total:  $" + billetes, "Total", JOptionPane.INFORMATION_MESSAGE);
-            } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(null, "Error: Ingrese valores numéricos válidos", "Error", JOptionPane.ERROR_MESSAGE);
+                num2Value = Integer.parseInt(num2.getText());
+            } catch (NumberFormatException r) {
+                num2Value = 0;
             }
+            int num5Value;
+            try {
+                num5Value = Integer.parseInt(num5.getText());
+            } catch (NumberFormatException r) {
+                num5Value = 0;
+            }
+            int num10Value;
+            try {
+                num10Value = Integer.parseInt(num10.getText());
+            } catch (NumberFormatException r) {
+                num10Value = 0;
+            }
+            int num20Value;
+            try {
+                num20Value = Integer.parseInt(num20.getText());
+            } catch (NumberFormatException r) {
+                num20Value = 0;
+            }
+            int num50Value;
+            try {
+                num50Value = Integer.parseInt(num50.getText());
+            } catch (NumberFormatException r) {
+                num50Value = 0;
+            }
+            int num100Value;
+            try {
+                num100Value = Integer.parseInt(num100.getText());
+            } catch (NumberFormatException r) {
+                num100Value = 0;
+            }
+
+            int billetes = (2_000 * num2Value) +
+                    (5_000 * num5Value) +
+                    (10_000 * num10Value) +
+                    (20_000 * num20Value) +
+                    (50_000 * num50Value) +
+                    (100_000 * num100Value);
+            JOptionPane.showMessageDialog(null, "Total:  $" + billetes, "Total", JOptionPane.INFORMATION_MESSAGE);
         });
 
         backButton.addActionListener(e -> {
