@@ -142,4 +142,13 @@ Su facura se ha generado con exito
 
  
 
-Total de todas las facturas: $925500.0
+Total de todas las facturas: $925500.0-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Papitas chorreadas
+   Cantidad:  1
+   Precio:    12000.0
+:_______________________________:            Total:  $12000.0
+
+ 

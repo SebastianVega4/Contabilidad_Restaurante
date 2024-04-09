@@ -48,7 +48,7 @@ public class GUIstore {
         frame.repaint();
     }
 
-    public void showCustomerMenuPanel()throws IOException {
+    public void showMenuPanel()throws IOException {
         GUIMenuPanel gUIMenuPanel = new GUIMenuPanel(this);
         frame.getContentPane().removeAll();
         frame.getContentPane().add(gUIMenuPanel.getPanel(), BorderLayout.CENTER);

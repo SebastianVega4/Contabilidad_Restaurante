@@ -9,6 +9,7 @@ import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.io.IOException;
+import java.util.Objects;
 
 public class GUIEditProduct {
 
@@ -16,15 +17,14 @@ public class GUIEditProduct {
     private final Inventory inventory;
 
     public GUIEditProduct(GUIstore guiStore, Product product, int index) throws IOException {
-        LogicAlcala logicAlcala = guiStore.getLogicAlcala();
         this.inventory = GUIstore.getInventory();
         panel = new JPanel(new BorderLayout()) {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon backgroundImage = null;
+                ImageIcon backgroundImage;
                 try {
-                    backgroundImage = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/Menu.png")));
+                    backgroundImage = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/menu.png"))));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -35,7 +35,7 @@ public class GUIEditProduct {
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setOpaque(false);
 
-        ImageIcon imageLogo = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/Logo.png")));
+        ImageIcon imageLogo = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/logo.png"))));
         Image image = imageLogo.getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
         ImageIcon scaledImageLogo = new ImageIcon(image);
         JLabel imgLogo = new JLabel(scaledImageLogo);

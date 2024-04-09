@@ -4,6 +4,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
+import java.util.Objects;
 
 public class GUIMenuPanel {
     private final JPanel panel;
@@ -13,9 +14,9 @@ public class GUIMenuPanel {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon backgroundImage = null;
+                ImageIcon backgroundImage;
                 try {
-                    backgroundImage = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/menu.png")));
+                    backgroundImage = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/menu.png"))));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -26,7 +27,8 @@ public class GUIMenuPanel {
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setOpaque(false);
 
-        ImageIcon imageLogo = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/Logo.png")));
+        ImageIcon imageLogo = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/l" +
+                "ogo.png"))));
         Image image = imageLogo.getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
         ImageIcon scaledImageLogo = new ImageIcon(image);
         JLabel imgLogo = new JLabel(scaledImageLogo);
@@ -35,7 +37,7 @@ public class GUIMenuPanel {
         JPanel centerPanel = new JPanel(new GridBagLayout());
         centerPanel.setOpaque(false);
 
-        ImageIcon catalogIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/catalogo.png")));
+        ImageIcon catalogIcon = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/catalogo.png"))));
         Image catalogImage = catalogIcon.getImage().getScaledInstance(80, 80, Image.SCALE_SMOOTH);
         ImageIcon scaledCatalogIcon = new ImageIcon(catalogImage);
         JButton catalogButton = new JButton("Catálogo", scaledCatalogIcon);
@@ -48,7 +50,7 @@ public class GUIMenuPanel {
         catalogButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         centerPanel.add(catalogButton);
 
-        ImageIcon cartIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/carrito.png")));
+        ImageIcon cartIcon = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/carrito.png"))));
         Image cartImage = cartIcon.getImage().getScaledInstance(80, 80, Image.SCALE_SMOOTH);
         ImageIcon scaledCartIcon = new ImageIcon(cartImage);
         JButton cartButton = new JButton("Comanda", scaledCartIcon);
@@ -60,7 +62,7 @@ public class GUIMenuPanel {
         cartButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         centerPanel.add(cartButton);
 
-        ImageIcon boxIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/box.png")));
+        ImageIcon boxIcon = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/box.png"))));
         Image boxImage = boxIcon.getImage().getScaledInstance(80, 80, Image.SCALE_SMOOTH);
         ImageIcon scaledboxIcon = new ImageIcon(boxImage);
         JButton boxBotton = new JButton("CAJA", scaledboxIcon);
@@ -72,7 +74,7 @@ public class GUIMenuPanel {
         boxBotton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         centerPanel.add(boxBotton);
 
-        ImageIcon calIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/calcula.png")));
+        ImageIcon calIcon = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/calcula.png"))));
         Image calImage = calIcon.getImage().getScaledInstance(80, 80, Image.SCALE_SMOOTH);
         ImageIcon scaledcalIcon = new ImageIcon(calImage);
         JButton calculatorBotton = new JButton("CALCULADORA", scaledcalIcon);
@@ -87,7 +89,7 @@ public class GUIMenuPanel {
         JPanel buttomPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         buttomPanel.setOpaque(false);
 
-        ImageIcon signoutIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/signout11.png")));
+        ImageIcon signoutIcon = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/signout11.png"))));
         Image signoutImage = signoutIcon.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
         ImageIcon scaledSignoutIcon = new ImageIcon(signoutImage);
         JButton signOffButton = new JButton("Cerrar Sesión", scaledSignoutIcon);

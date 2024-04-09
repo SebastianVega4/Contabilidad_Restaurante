@@ -6,6 +6,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
+import java.util.Objects;
 
 public class GUILoginPanel {
     private final JPanel panel;
@@ -18,9 +19,9 @@ public class GUILoginPanel {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon backgroundImage = null;
+                ImageIcon backgroundImage;
                 try {
-                    backgroundImage = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/login.png")));
+                    backgroundImage = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/login.png"))));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -33,7 +34,7 @@ public class GUILoginPanel {
         topPanel.setOpaque(false);
 
         //logo empresa arriba a la izquierda
-        ImageIcon imageLogo = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/logo.png")));
+        ImageIcon imageLogo = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/logo.png"))));
         Image imageLog = imageLogo.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
         ImageIcon scaledImageLogo = new ImageIcon(imageLog);
         JLabel imgLog = new JLabel(scaledImageLogo);
@@ -106,7 +107,7 @@ public class GUILoginPanel {
         loginButton.addActionListener(e -> {
             if (logicAlcala.login(userField.getText(), new String(passwordField.getPassword()))) {
                 try {
-                    guiStore.showCustomerMenuPanel();
+                    guiStore.showMenuPanel();
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }

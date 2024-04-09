@@ -9,6 +9,7 @@ import java.awt.*;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class GUIboxPanel {
     private final JPanel panel;
@@ -18,9 +19,9 @@ public class GUIboxPanel {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon backgroundImage = null;
+                ImageIcon backgroundImage;
                 try {
-                    backgroundImage = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/caja.png")));
+                    backgroundImage = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/caja.png"))));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -31,7 +32,7 @@ public class GUIboxPanel {
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setOpaque(false);
 
-        ImageIcon imageLogo = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/Logo.png")));
+        ImageIcon imageLogo = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/logo.png"))));
         Image image = imageLogo.getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
         ImageIcon scaledImageLogo = new ImageIcon(image);
         JLabel imgLogo = new JLabel(scaledImageLogo);
@@ -96,15 +97,15 @@ public class GUIboxPanel {
         buttonPanel.setBackground(Color.black);
         buttonPanel.setOpaque(false);
 
-        ImageIcon backIcon = new ImageIcon(String.valueOf(ImageIO.read(getClass().getResourceAsStream("/Icons\\back.png"))));
+        ImageIcon backIcon = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/back.png"))));
         Image backImage = backIcon.getImage().getScaledInstance(15, 15, Image.SCALE_SMOOTH);
         ImageIcon scaledBackIcon = new ImageIcon(backImage);
-        JButton backButoon = new JButton("Atras",scaledBackIcon);
-        backButoon.setForeground(Color.WHITE);
-        backButoon.setBackground(Color.black);
-        backButoon.setFont(new Font("Serif", Font.ITALIC, 14));
-        backButoon.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        buttonPanel.add(backButoon);
+        JButton backButton = new JButton("Atras", scaledBackIcon);
+        backButton .setForeground(Color.WHITE);
+        backButton .setBackground(Color.black);
+        backButton .setFont(new Font("Serif", Font.ITALIC, 14));
+        backButton .setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        buttonPanel.add(backButton );
 
         panel.add(topPanel, BorderLayout.PAGE_START);
         panel.add(centerPanel, BorderLayout.CENTER);
@@ -162,9 +163,9 @@ public class GUIboxPanel {
             }
         });
 
-        backButoon.addActionListener(e -> {
+        backButton.addActionListener(e -> {
             try {
-                guiStore.showCustomerMenuPanel();
+                guiStore.showMenuPanel();
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }

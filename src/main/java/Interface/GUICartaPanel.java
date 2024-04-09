@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class GUICartaPanel {
     private final JPanel panel;
@@ -24,9 +25,9 @@ public class GUICartaPanel {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon backgroundImage = null;
+                ImageIcon backgroundImage;
                 try {
-                    backgroundImage = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\carta.png")));
+                    backgroundImage = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/carta.png"))));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -38,7 +39,7 @@ public class GUICartaPanel {
         GridBagConstraints gbc = new GridBagConstraints();
         topPanel.setOpaque(false);
 
-        ImageIcon imageLogo = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\Logo.png")));
+        ImageIcon imageLogo = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/logo.png"))));
         Image imageL = imageLogo.getImage().getScaledInstance(70, 70, Image.SCALE_SMOOTH);
         ImageIcon scaledImageLogo = new ImageIcon(imageL);
         JLabel imgLogo = new JLabel(scaledImageLogo);
@@ -85,11 +86,11 @@ public class GUICartaPanel {
         gbcProduct.gridx++;
         centerPanel.add(numberLabelTitle, gbcProduct);
 
-        ImageIcon addIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\add.png")));
+        ImageIcon addIcon = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/add.png"))));
         Image addImage = addIcon.getImage().getScaledInstance(15, 15, Image.SCALE_SMOOTH);
         ImageIcon scaledAddIcon = new ImageIcon(addImage);
 
-        ImageIcon editIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons/edit.png")));
+        ImageIcon editIcon = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/edit.png"))));
         Image editImage = editIcon.getImage().getScaledInstance(15, 15, Image.SCALE_SMOOTH);
         ImageIcon scalededitIcon = new ImageIcon(editImage);
 
@@ -191,7 +192,7 @@ public class GUICartaPanel {
         JPanel buttomPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         buttomPanel.setOpaque(false);
 
-        ImageIcon carIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\carrito.png")));
+        ImageIcon carIcon = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/carrito.png"))));
         Image carImage = carIcon.getImage().getScaledInstance(15, 15, Image.SCALE_SMOOTH);
         ImageIcon scaledcarIcon = new ImageIcon(carImage);
         JButton carButton = new JButton("Comanda", scaledcarIcon);
@@ -201,7 +202,7 @@ public class GUICartaPanel {
         carButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         buttomPanel.add(carButton);
 
-        ImageIcon backIcon = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\back.png")));
+        ImageIcon backIcon = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/back.png"))));
         Image backImage = backIcon.getImage().getScaledInstance(15, 15, Image.SCALE_SMOOTH);
         ImageIcon scaledBackIcon = new ImageIcon(backImage);
         JButton backButton = new JButton("Atrás", scaledBackIcon);
@@ -215,9 +216,9 @@ public class GUICartaPanel {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon backgroundImage = null;
+                ImageIcon backgroundImage;
                 try {
-                    backgroundImage = new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Icons\\caja.png")));
+                    backgroundImage = new ImageIcon(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Icons/caja.png"))));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -359,7 +360,7 @@ public class GUICartaPanel {
         searchField.addActionListener(r -> searchButton.doClick());
         backButton.addActionListener(e -> {
             try {
-                guiStore.showCustomerMenuPanel();
+                guiStore.showMenuPanel();
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
