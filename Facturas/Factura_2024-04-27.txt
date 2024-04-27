@@ -34,3 +34,5 @@ Su facura se ha generado con exito
 :_________________________________________:            Total:  $162500.0
 
  
+
+Total de todas las facturas: $180500.0
