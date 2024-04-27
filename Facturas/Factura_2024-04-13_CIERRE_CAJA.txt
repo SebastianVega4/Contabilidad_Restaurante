@@ -1,0 +1,11 @@
+-----------------------------------------
+Caja Inicial: 212000
+Pago: 17100, Agua 3600 es de alcala
+Ventas: 22500.0
+-----------------------------------------
+TOTAL Caja: 217400
+
+TOTAL Datafono: 0.0
+TOTAL Transferencias: 0.0
+
+Saldo final : 217400.0

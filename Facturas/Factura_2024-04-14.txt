@@ -1,0 +1,154 @@
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Patacón con ahogado
+   Cantidad:  1
+   Precio:    12000.0
+-- _________________________________ --
+   Producto:  Gaseosa
+   Cantidad:  3
+   Precio:    4000.0
+-- _________________________________ --
+   Producto:  Jarra Liminada Grande
+   Cantidad:  1
+   Precio:    25000.0
+-- _________________________________ --
+   Producto:  Picada Alcalá (6 personas)
+   Cantidad:  1
+   Precio:    170000.0
+:_________________________________________:            Total:  $219000.0
+
+ 
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Trucha al ajillo
+   Cantidad:  1
+   Precio:    35000.0
+-- _________________________________ --
+   Producto:  Trucha mandarina
+   Cantidad:  3
+   Precio:    35000.0
+-- _________________________________ --
+   Producto:  Gaseosa
+   Cantidad:  1
+   Precio:    4000.0
+-- _________________________________ --
+   Producto:  Limonada natural
+   Cantidad:  1
+   Precio:    5000.0
+-- _________________________________ --
+   Producto:  Botella de agua
+   Cantidad:  2
+   Precio:    3000.0
+:_________________________________________:            Total:  $155000.0
+
+ 
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Salmon Citrico
+   Cantidad:  1
+   Precio:    54000.0
+-- _________________________________ --
+   Producto:  Trucha mandarina
+   Cantidad:  1
+   Precio:    35000.0
+-- _________________________________ --
+   Producto:  Limonada natural
+   Cantidad:  1
+   Precio:    5000.0
+-- _________________________________ --
+   Producto:  Sorbete de fruta natural
+   Cantidad:  1
+   Precio:    6000.0
+:_________________________________________:            Total:  $100000.0
+
+ 
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Papitas chorreadas
+   Cantidad:  1
+   Precio:    12000.0
+-- _________________________________ --
+   Producto:  1/2 Punta de anca
+   Cantidad:  1
+   Precio:    25000.0
+-- _________________________________ --
+   Producto:  Salmon Citrico
+   Cantidad:  1
+   Precio:    54000.0
+-- _________________________________ --
+   Producto:  Trucha mandarina
+   Cantidad:  1
+   Precio:    35000.0
+-- _________________________________ --
+   Producto:  Jugos naturales
+   Cantidad:  1
+   Precio:    5000.0
+-- _________________________________ --
+   Producto:  Limonada natural
+   Cantidad:  2
+   Precio:    5000.0
+:_________________________________________:            Total:  $141000.0
+
+ 
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Trucha al ajillo
+   Cantidad:  3
+   Precio:    35000.0
+-- _________________________________ --
+   Producto:  Salmon Plancha
+   Cantidad:  2
+   Precio:    50000.0
+-- _________________________________ --
+   Producto:  Trucha en salsa de almendras
+   Cantidad:  1
+   Precio:    38000.0
+-- _________________________________ --
+   Producto:  Jarra Liminada Grande
+   Cantidad:  2
+   Precio:    25000.0
+-- _________________________________ --
+   Producto:  Pechuga de pollo a la parrilla
+   Cantidad:  1
+   Precio:    32000.0
+:_________________________________________:            Total:  $325000.0
+
+ 
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Gaseosa
+   Cantidad:  3
+   Precio:    4000.0
+-- _________________________________ --
+   Producto:  Trucha Alcala 
+   Cantidad:  1
+   Precio:    45000.0
+-- _________________________________ --
+   Producto:  Trucha al ajillo
+   Cantidad:  1
+   Precio:    35000.0
+-- _________________________________ --
+   Producto:  Chorizos artesanales
+   Cantidad:  1
+   Precio:    15000.0
+-- _________________________________ --
+   Producto:  Limonada natural
+   Cantidad:  1
+   Precio:    5000.0
+:_________________________________________:            Total:  $112000.0
+
+ 
+
+Total de todas las facturas: $1052000.0

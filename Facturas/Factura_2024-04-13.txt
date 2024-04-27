@@ -1,0 +1,16 @@
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Guarapo de sabores
+   Cantidad:  2
+   Precio:    9000.0
+-- _________________________________ --
+   Producto:  Medio Guarapo
+   Cantidad:  1
+   Precio:    4500.0
+:_________________________________________:            Total:  $22500.0
+
+ 
+
+Total de todas las facturas: $22500.0

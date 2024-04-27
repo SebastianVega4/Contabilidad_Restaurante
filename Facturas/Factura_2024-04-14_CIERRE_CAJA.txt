@@ -1,0 +1,11 @@
+-----------------------------------------
+Caja Inicial: 217400
+Pago: 2900, Domicio en el bus paipa
+Ventas: 1052000.0
+-----------------------------------------
+TOTAL Caja: 1266500
+
+TOTAL Datafono: 236500.0
+TOTAL Transferencias: 0.0
+
+TOTAL ventas dia: 1288500.0

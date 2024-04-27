@@ -1,0 +1,46 @@
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Patacón con ahogado
+   Cantidad:  1
+   Precio:    12000.0
+-- _________________________________ --
+   Producto:  Recipiente desechable para llevar sopa
+   Cantidad:  1
+   Precio:    1000.0
+-- _________________________________ --
+   Producto:  Cerveza
+   Cantidad:  4
+   Precio:    4000.0
+-- _________________________________ --
+   Producto:  Picada pequeña (2 personas)
+   Cantidad:  1
+   Precio:    68000.0
+:_________________________________________:            Total:  $97000.0
+
+ 
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Jarra Liminada Pequeña
+   Cantidad:  1
+   Precio:    13000.0
+-- _________________________________ --
+   Producto:  Baby beef
+   Cantidad:  1
+   Precio:    45000.0
+-- _________________________________ --
+   Producto:  Churrasco
+   Cantidad:  1
+   Precio:    47000.0
+-- _________________________________ --
+   Producto:  Trifásico Alcalá
+   Cantidad:  1
+   Precio:    48000.0
+:_________________________________________:            Total:  $153000.0
+
+ 
+
+Total de todas las facturas: $250000.0

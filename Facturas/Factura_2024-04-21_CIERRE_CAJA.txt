@@ -1,0 +1,15 @@
+-----------------------------------------
+Caja Inicial: 238400
+Pago: 12000, Rellenas
+Pago: 10000, Aguacates
+Pago: 2000, pan
+Pago: 1000, calados
+Pago: 2000, bus
+Ventas: 250000.0
+-----------------------------------------
+TOTAL Caja: 461400
+
+TOTAL Datafono: 112500.0
+TOTAL Transferencias: 0.0
+
+TOTAL ventas : 362500.0

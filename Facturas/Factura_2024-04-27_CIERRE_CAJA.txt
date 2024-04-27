@@ -1,0 +1,11 @@
+-----------------------------------------
+Caja Inicial: 85400
+Pago: 3900, bus carne
+Ventas: 180500.0
+-----------------------------------------
+TOTAL Caja: 262000
+
+TOTAL Datafono: 0.0
+TOTAL Transferencias: 0.0
+
+TOTAL ventas : 262000.0
