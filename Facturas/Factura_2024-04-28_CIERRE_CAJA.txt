@@ -1,0 +1,12 @@
+-----------------------------------------
+Caja Inicial: 263000
+pago: 35000 Arepas
+ayer de se sacaron 2000 para ricostilla caldo de papas
+Ventas: 393000.0
+-----------------------------------------
+TOTAL Caja: 619000 
+
+TOTAL Datafono: 326000.0
+TOTAL Transferencias: 0.0
+
+TOTAL ventas : 719000.0

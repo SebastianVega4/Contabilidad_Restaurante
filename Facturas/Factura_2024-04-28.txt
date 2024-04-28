@@ -1,0 +1,104 @@
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Salmon Citrico
+   Cantidad:  1
+   Precio:    54000.0
+-- _________________________________ --
+   Producto:  Trucha en salsa de almendras
+   Cantidad:  1
+   Precio:    38000.0
+-- _________________________________ --
+   Producto:  Club Colombia
+   Cantidad:  1
+   Precio:    5000.0
+-- _________________________________ --
+   Producto:  Jugos naturales
+   Cantidad:  1
+   Precio:    5000.0
+:_________________________________________:            Total:  $102000.0
+
+ 
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Patacón con ahogado
+   Cantidad:  1
+   Precio:    12000.0
+-- _________________________________ --
+   Producto:  Recipiente desechable para llevar
+   Cantidad:  1
+   Precio:    1000.0
+-- _________________________________ --
+   Producto:  Picada pequeña (2 personas)
+   Cantidad:  1
+   Precio:    68000.0
+:_________________________________________:            Total:  $81000.0
+
+ 
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Pechuga Jr
+   Cantidad:  1
+   Precio:    22000.0
+-- _________________________________ --
+   Producto:  Trucha mandarina
+   Cantidad:  1
+   Precio:    35000.0
+-- _________________________________ --
+   Producto:  Botella de agua
+   Cantidad:  1
+   Precio:    3000.0
+-- _________________________________ --
+   Producto:  Lomo de cerdo a la parrilla
+   Cantidad:  1
+   Precio:    39000.0
+-- _________________________________ --
+   Producto:  Picada pequeña (2 personas)
+   Cantidad:  1
+   Precio:    68000.0
+-- _________________________________ --
+   Producto:  Jugos naturales
+   Cantidad:  3
+   Precio:    5000.0
+-- _________________________________ --
+   Producto:  Porción de Rellena (1und)
+   Cantidad:  1
+   Precio:    5000.0
+:_________________________________________:            Total:  $187000.0
+
+ 
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Limonada natural
+   Cantidad:  1
+   Precio:    5000.0
+-- _________________________________ --
+   Producto:  Jugos naturales
+   Cantidad:  1
+   Precio:    5000.0
+-- _________________________________ --
+   Producto:  Churrasco
+   Cantidad:  1
+   Precio:    47000.0
+-- _________________________________ --
+   Producto:  Pechuga Jr
+   Cantidad:  1
+   Precio:    22000.0
+-- _________________________________ --
+   Producto:  Gaseosa
+   Cantidad:  1
+   Precio:    4000.0
+
+                                                               60.000 en datafono
+:_________________________________________:            Total:  $23000.0
+
+ 
+
+Total de todas las facturas: $393000.0
