@@ -1,0 +1,26 @@
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Pechuga Jr
+   Cantidad:  1
+   Precio:    22000.0
+-- _________________________________ --
+   Producto:  Pechuga de pollo a la parrilla
+   Cantidad:  1
+   Precio:    32000.0
+-- _________________________________ --
+   Producto:  Jarra Liminada Pequeña
+   Cantidad:  1
+   Precio:    15000.0
+-- _________________________________ --
+   Producto:  Lomo de cerdo a la parrilla
+   Cantidad:  1
+   Precio:    39000.0
+:_________________________________________:            Total:  $108000.0
+                                           NEQUI
+ 
+
+ 
+
+Total de todas las facturas: $108000.0

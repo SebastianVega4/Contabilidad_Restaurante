@@ -1,0 +1,92 @@
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Chorizos artesanales
+   Cantidad:  2
+   Precio:    15000.0
+-- _________________________________ --
+   Producto:  Recipiente desechable para llevar
+   Cantidad:  1
+   Precio:    1500.0
+-- _________________________________ --
+   Producto:  Botella de agua
+   Cantidad:  1
+   Precio:    3000.0
+-- _________________________________ --
+   Producto:  Limonada natural
+   Cantidad:  1
+   Precio:    5000.0
+-- _________________________________ --
+   Producto:  Jugos naturales
+   Cantidad:  2
+   Precio:    5000.0
+-- _________________________________ --
+   Producto:  Oio de bife
+   Cantidad:  1
+   Precio:    45000.0
+-- _________________________________ --
+   Producto:  Bife chorizo
+   Cantidad:  1
+   Precio:    45000.0
+:_________________________________________:            Total:  $139500.0
+                                         Mas 4000 de Propina
+ 
+ 
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Oio de bife
+   Cantidad:  6
+   Precio:    45000.0
+-- _________________________________ --
+   Producto:  Bife chorizo
+   Cantidad:  1
+   Precio:    45000.0
+-- _________________________________ --
+   Producto:  Lomo de cerdo a la parrilla
+   Cantidad:  1
+   Precio:    39000.0
+-- _________________________________ --
+   Producto:  Churrasco
+   Cantidad:  1
+   Precio:    47000.0
+-- _________________________________ --
+   Producto:  Trifásico Alcalá
+   Cantidad:  2
+   Precio:    48000.0
+-- _________________________________ --
+   Producto:  Trucha al ajillo
+   Cantidad:  1
+   Precio:    35000.0
+-- _________________________________ --
+   Producto:  Salmon Citrico
+   Cantidad:  1
+   Precio:    54000.0
+-- _________________________________ --
+   Producto:  Robalo a la plancha
+   Cantidad:  1
+   Precio:    49000.0
+-- _________________________________ --
+   Producto:  Robalo en salsa de camarón
+   Cantidad:  1
+   Precio:    62000.0
+-- _________________________________ --
+   Producto:  Limonada natural
+   Cantidad:  1
+   Precio:    5000.0
+-- _________________________________ --
+   Producto:  Recipiente desechable para llevar
+   Cantidad:  1
+   Precio:    1500.0
+-- _________________________________ --
+   Producto:  Gaseosa
+   Cantidad:  9
+   Precio:    4000.0
+
+   T: 739.500, 400.000 Abono, 339.500 Datafono
+:_________________________________________:            Total:  $339500.0
+ 
+
+Total de todas las facturas: $479000.0

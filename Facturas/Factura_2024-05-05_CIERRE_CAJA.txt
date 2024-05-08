@@ -1,0 +1,12 @@
+-----------------------------------------
+Caja Inicial: 808000
+Pago: 10000, ayer se saco de caja para darle a Deisy
+Pago: 4000, propina de datafono
+Ventas: 582500.0
+-----------------------------------------
+TOTAL Caja: 1376500.0                            
+
+TOTAL Datafono: 479000.0
+TOTAL Transferencias: 108000.0
+
+TOTAL ventas : 1.169.500    ... mas 400.000 abono evento - Total ventas: 1569500.0

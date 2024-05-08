@@ -1,0 +1,10 @@
+-----------------------------------------
+Caja Inicial: 363000
+Ventas: 445000.0
+-----------------------------------------
+TOTAL Caja: 808000 (2.000) en monedas
+
+TOTAL Datafono: 0.0
+TOTAL Transferencias: 0.0
+
+TOTAL ventas : 445000.0

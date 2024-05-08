@@ -1,0 +1,9 @@
+TOTAL Caja cierre: 1376500
+
+Sebastian:90.000
+Sarita: 45.000
+Deisy:100000
+
+ 
+=
+Saldo Final= $ 1141500 -> (quedan 500 en caja y 5.000 extras (monedas))
