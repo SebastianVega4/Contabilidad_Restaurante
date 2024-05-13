@@ -1,0 +1,24 @@
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Null
+   Cantidad:  1
+   Precio:    364000.0
+:_________________________________________:            Total:  $364000.0
+                                         Propina en ese valor de:0
+ 
+
+-----------------------------------------------
+          RESTAURANTE ALCALA
+Su facura se ha generado con exito
+-- _________________________________ --
+   Producto:  Null
+   Cantidad:  1
+   Precio:    214000.0
+:_________________________________________:            Total:  $214000.0
+                                        Total de transaccion con haspedaje 754.000
+
+ 
+
+Total de todas las facturas: $578000.0

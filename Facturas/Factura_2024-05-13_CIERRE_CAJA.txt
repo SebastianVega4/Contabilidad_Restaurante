@@ -1,0 +1,45 @@
+-----------------------------------------
+Caja Inicial:6.060.000
+(pago) Mercado Paraiso sophia: 400.000
+(pago) Arepas: 35.000
+(pago) cortesia videos: 20.000
+Ventas: 4.000 gaseosa
+-----------------------------------------
+TOTAL Caja: 5.609.000
+
+TOTAL Datafono mesas y cenas hospedaje: 565.000
+TOTAL Transferencias: 0.0
+
+TOTAL ventas : 569.000
+   
+Datafono:
+13/05
+Venta mesa:148.000
+
+13/05
+Venta mesa:120.000
+
+Domingo
+12/05/24
+cena cabaña luna 180.000
+
+Domingo
+12/05/24
+cena cabaña del sol : 117.000
+
+
+NOMINA:
+Yazmin: 150.000
+Alejandra: 56.000
+Sarita:56.000
+Sebastian: 150.000
+Andres:170.000
+pipe: 50.000
+Lus marina:120.000
+Deisy: 120.000
+
+Total nomina a pagar:872000
+Total caja :5.609.000
+
+
+TOTAL EFECTIVO: 4.737.000

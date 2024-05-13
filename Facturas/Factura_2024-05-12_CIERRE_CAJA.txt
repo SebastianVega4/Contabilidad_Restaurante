@@ -1,0 +1,13 @@
+-----------------------------------------
+Caja Inicial: 644000
+Pago: 125000, Arepass 60 creo
+
+(Mesas sin Comanda) +311.000
+Ventas: 5230000.0
+-----------------------------------------
+TOTAL Caja: 6.060.000
+
+TOTAL Datafono: 1310000.0
+TOTAL Transferencias: 528000.0
+
+TOTAL ventas : 7.378.000.0
