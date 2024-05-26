@@ -1,0 +1,11 @@
+-----------------------------------------
+Caja Inicial: 350000.0
+Pago: 67000.0 (Cocacola)
+Ventas: 180000.0  (102000, 78000)
+-----------------------------------------
+TOTAL Caja: 463000.0
+
+TOTAL Datafono: 0.0
+TOTAL Transferencias: 0.0
+
+TOTAL ventas : 180000.0

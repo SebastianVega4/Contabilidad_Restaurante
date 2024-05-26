@@ -1,0 +1,26 @@
+-----------------------------------------
+Caja Inicial: 263.000
+Ingreso: 100.000 prestamo Andres
+Pago:  12.000 papas
+Pago:  2.900 bus encomienda
+Pago:  45.000 20 arepas
+Pago:  40.000 propinas de datafono
+Ventas: 614.500 (154.000, 142.000, 28.000, 102.000, 188.500)
+-----------------------------------------
+TOTAL Caja: 877.600    1.600...m
+
+TOTAL Datafono: 589.000 (-40.000 propina ya descontadas en efectivo)
+TOTAL Transferencias: 149.000 Bancolombia
+
+TOTAL ventas : 1.308.500,0
+
+
+NOMINA:
+Sarita: 45.000
+Sebastian: 90.000   .
+Marelis: 110.000    
+
+Total caja: 877.600
+Total nomina a pagar: 245.000
+
+TOTAL EFECTIVO a entregar: 632.600 (1.600 monedas)

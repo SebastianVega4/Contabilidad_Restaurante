@@ -1,0 +1,31 @@
+18/05/24
+
+1 Mesa: 83.500
+
+-----------------------------------------
+Caja Inicial: 83.500
+(pago) Arepas: 35.000
+(pago) Papas fosforito: 6.000
+Ventas 5 mesas: 902.500       (105.000+ 101.500+ 226.000+ 179.000+ 291.000)
+-----------------------------------------
+TOTAL Caja: 945.000
+
+TOTAL Datafono 1 mesa: 364.500
+TOTAL Transferencias: 0.0
+
+TOTAL ventas: 1.267.000
+  
+
+
+NOMINA:
+Sarita: 45.000
+Sebastian: 90.000
+Andres: 
+pipe: 20.000
+Marelis: 104.000
+Propina faltante: 12.600
+
+Total caja: 945.000
+Total nomina a pagar: 271.600
+
+TOTAL EFECTIVO a entregar: 673400
