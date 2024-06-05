@@ -1,0 +1,46 @@
+-----------------------------------------
+                               01/06/24
+inicial:         80.000
+1Mesa:           82.000
+se saco de caja: -20.000
+Total 1 mesa:    142.000
+
+-----------------------------------------
+                               02/06/24
+Caja Inicial:          142.000
+Pago salario Sarita:   -45.000
+Pago arepas:           -54.000
+Quitar de caja propina: -9000 datafono y -3.000 de andres le dejaron en caja
+venta andres guarapo:   10.000
+Ventas 4 mesas+ evento : 1.524.000 (330.500, 389.0000, 141.000, 54.500, 609.000)
+-----------------------------------------
+TOTAL Caja:              1.565.000 
+
+TOTAL Datafono: 0.0
+TOTAL Transferencias 1mesa: 90.000 (9.000 propina)
+
+TOTAL ventas 5 mesas + evento: 1.615.000
+
+-----------------------------------------
+                               03/06/24
+Caja Inicial:   565.000
+Ventas 1 mesa:  68.500
+-----------------------------------------
+TOTAL Caja:     633.500 + 8.000 que no se cobraron agua y club colombia = ***641.500*** 
+
+TOTAL Datafono: 0.0
+TOTAL Transferencias 2mesa: 579.000  (214.000, 362.000)
+
+TOTAL ventas 3 mesas: 644.500
+
+NOMINA:
+
+Sebastian:45.000*3 = 135.000
+Total efectivo a entregar: (caja) 641.500-(nomina)135.000 =    506.500$
+
+Platos Fuertes:
+01/06/24  = 2
+02/06/24  = 18
+03/06/24  = 12
+
+Total:    = 32
