@@ -81,14 +81,13 @@ Alcala/
 
 Este proyecto se encuentra bajo la Licencia GPL 3.0. Puedes usarlo, modificarlo y distribuirlo siempre que mantengas los mismos términos de licencia.
 
-## 📬 Contacto
+## 👨‍🎓 Autor
 
 Desarrollado por **Sebastián Vega**  
-🔗 [LinkedIn](https://www.linkedin.com/in/johan-sebastian-vega-ruiz-b1292011b/)  
-📧 Correo : *Sebastian.vegar2015@gmail.com*
+📧 *Sebastian.vegar2015@gmail.com*  
+🔗 [LinkedIn - Johan Sebastián Vega Ruiz](https://www.linkedin.com/in/johan-sebastian-vega-ruiz-b1292011b/)
 
 ---
 
-🏫 **Universidad Pedagógica y Tecnológica de Colombia**  
-📍 Sogamoso, Boyacá  
-📅 2021 - 2025
+
+© 2025 — Sebastian Vega
